@@ -7,5 +7,5 @@ app.listen(port, (error) => {
     console.error('Failed to start server:', error);
     process.exit(1);
   }
-  console.log(`SlotBook API listening on http://localhost:${port}`);
+  console.log(`SlotSync API listening on http://localhost:${port}`);
 });

@@ -1,7 +1,7 @@
 {
-  "name": "slotbook-api",
+  "name": "slotsync-api",
   "version": "0.1.0",
-  "description": "SlotBook appointment booking API",
+  "description": "SlotSync API - Production-grade appointment booking backend with concurrency control and time zone handling",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch --env-file=.env src/server.ts",
