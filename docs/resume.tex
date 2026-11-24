@@ -1,0 +1,140 @@
+%-------------------------------------------------------------------------------
+% Omkar Swami - Resume (honest junior full stack)
+% Job section: UI modules only. KYC, Digio, MF Central, Razorpay, SIP, and
+% the 40% duplication line are removed because that work was the senior's.
+% Projects match public repos on github.com/omkarswami20.
+% Compile on Overleaf with pdfLaTeX.
+%-------------------------------------------------------------------------------
+\documentclass[a4paper,11pt]{article}
+
+%---------- SPACING KNOBS (tuned to fill exactly 1 page) ----------
+\newcommand{\myLineSpacing}{1.04}  % line spacing inside text      (1.00 - 1.15)
+\newcommand{\bulletgap}{2pt}       % gap between bullet points     (0pt - 4pt)
+\newcommand{\sectiongap}{7pt}      % gap above each section title  (2pt - 10pt)
+\newcommand{\entrygap}{5pt}        % gap between job/project items (0pt - 6pt)
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1   % makes the PDF text machine-readable for ATS parsers
+
+\pagestyle{empty}
+\raggedright
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.45in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\linespread{\myLineSpacing}
+
+\titleformat{\section}{\vspace{\sectiongap}\scshape\large\bfseries}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
+\titlespacing*{\section}{0pt}{0pt}{4pt}
+
+% ---------- helpers ----------
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{\entrygap}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-3pt}}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{\entrygap}\item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \small #2 \\
+  \end{tabular*}\vspace{-3pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=\bulletgap, parsep=0pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+  {\Huge \scshape Omkar Swami} \\ \vspace{2pt}
+  \small Software Developer \textbar{} React.js \textbar{} Node.js \textbar{} PostgreSQL \quad $|$ \quad Mumbai, India \\ \vspace{3pt}
+  \small +91 9167955436 $|$
+  \href{mailto:omkarswami0420@gmail.com}{omkarswami0420@gmail.com} $|$
+  \href{https://linkedin.com/in/omkarswami20}{linkedin.com/in/omkarswami20} $|$
+  \href{https://github.com/omkarswami20}{github.com/omkarswami20}
+\end{center}
+\vspace{-4pt}
+
+%---------- SUMMARY ----------
+\section{Summary}
+\small{Software developer with 1+ year building React.js and React Native screens on a live wealth platform, and personal Node.js APIs in Express. Backend work covers JWT authentication, PostgreSQL, libSQL/SQLite, and concurrency-safe transactions. Looking for a junior backend or full-stack role where the day-to-day work includes the API.}
+
+%---------- SKILLS ----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+  \textbf{Languages}{: JavaScript (ES6+), TypeScript, SQL} \\
+  \textbf{Backend}{: Node.js, Express.js, REST APIs, Zod, JSON Schema, Concurrency Control} \\
+  \textbf{Frontend}{: React.js, React Native, Redux Toolkit, RTK Query, Material UI} \\
+  \textbf{Databases}{: PostgreSQL, libSQL, SQLite, MongoDB} \\
+  \textbf{Auth \& Security}{: JWT (access/refresh), RBAC, bcrypt} \\
+  \textbf{Tools}{: Git, GitHub, Postman, Swagger, Linux/Bash}
+}}
+\end{itemize}
+\vspace{-4pt}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Associate Software Engineer}{Jun 2025 -- Present}
+    {TechStalwarts -- inXits (Wealth Management Platform)}{Mumbai, India}
+    \resumeItemListStart
+      \resumeItem{Build assigned web screens and shared UI modules for a live wealth platform in \textbf{React.js}, \textbf{Redux Toolkit}, and \textbf{RTK Query}, calling backend \textbf{REST APIs}}
+      \resumeItem{Build the mobile app screens in \textbf{React Native} for the same platform, reusing those API calls and matching the mobile layout to the web modules}
+      \resumeItem{Wire each web and mobile screen through loading, empty, error, and success states, and fix UI defects found in \textbf{UAT} and production on those modules}
+      \resumeItem{Work in the frontend codebase with a senior engineer, reading API responses and matching the UI to the contract the backend already exposes}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-4pt}
+
+%---------- PROJECTS ----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Vistora -- Property Rental Platform} $|$ \emph{Node.js, Express.js, PostgreSQL, Zod, JWT}}
+    {\href{https://github.com/omkarswami20/VistoraServer}{\underline{GitHub}}}
+    \resumeItemListStart
+      \resumeItem{Built a modular \textbf{REST API} in JavaScript with route, validation, controller, service, and repository layers, \textbf{Zod} validation, and centralized error handling}
+      \resumeItem{Implemented passwordless \textbf{OTP + MPIN} login: \textbf{bcrypt}-hashed MPINs, short-lived \textbf{JWT} access tokens, and server-stored refresh tokens that rotate on use and can be revoked}
+      \resumeItem{Added \textbf{RBAC} for Guest, Host, and Admin, with admin accounts seeded instead of self-registered}
+      \resumeItem{Modeled properties, images, and amenities in \textbf{PostgreSQL} with parameterized SQL, a transaction around the multi-table insert, and \textbf{JSON\_AGG} to return nested rows in one query}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{SlotSync -- Appointment Booking API} $|$ \emph{Node.js, Express 5, TypeScript, libSQL, Zod}}
+    {\href{https://github.com/omkarswami20/SlotSyncAPI}{\underline{GitHub}}}
+    \resumeItemListStart
+      \resumeItem{Built an appointment booking API in \textbf{TypeScript} and \textbf{Express 5} that computes bookable slots from a consultant's weekly schedule, buffer gaps, and time zones using \textbf{Luxon}}
+      \resumeItem{Prevented double-booking at the database level with transactions and a \textbf{BEFORE INSERT} trigger that blocks overlapping time slots, returning an HTTP \textbf{409 Conflict}}
+      \resumeItem{Validated inputs with \textbf{Zod} before running queries. Unknown routes return \textbf{404}, invalid inputs return \textbf{400}, and unexpected errors are logged with \textbf{pino} without leaking internal details}
+      \resumeItem{Stored data in \textbf{libSQL} with parameterized SQL (no ORM) and version-controlled schema migrations. Added \textbf{/health} for process uptime and \textbf{/ready} to check database connectivity}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-4pt}
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {G.H. Raisoni College of Engineering and Management}{Pune, India}
+    {Bachelor of Technology in Computer Science and Engineering -- CGPA: 7.31}{2020 -- 2024}
+\resumeSubHeadingListEnd
+
+\end{document}
